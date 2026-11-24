@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karban tartás</title>
+  <title>Szerviznapló</title>
   <link rel="stylesheet" href="CSS/style.css">
   <script src="JS/script.js" defer></script>
 </head>
@@ -12,34 +12,59 @@
 
   <header>
     <h1>Karbantartás</h1>
-    <p>Motoros és kerékpáros szerviznapló</p>
+    <p>Szerviznapló</p>
   </header>
 
   <nav>
     <a href="#jarmu">Jármű</a>
-    <a href="#szerviz">Új szerviz</a>
     <a href="#elozmenyek">Előzmények</a>
+    <a href="#szerviz">Új szerviz</a>
   </nav>
 
   <main>
-    <section id="jarmuvek">
+    <section id="jarmu">
       <h2>Jármű lista</h2>
-      <form name="jarmuvek">
-        <input type="checkbox" name="1" id="">
-        <label for="1">kawasaki versys 650</label> <br>
-        
-        <input type="checkbox" name="2" id="">
-        <label for="2">KTM DUKE 125 </label>
-
-      </form>
+        <form name="jarmuvek" id="jarmuvek"></form>
+      <div id="motor_kepek">
+        <figure id="kawasaki_kep">
+            <img src="Kepek/Kawa_1.jpg">
+            <figcaption>Kawasaki Versys 650</figcaption>
+        </figure>        
+      
+        <figure id="ktm_kep">
+            <img src="Kepek/ktm.jpg">
+            <figcaption>KTM Duke 125</figcaption>
+        </figure>    
+      </div>
     </section>
 
+<section id="elozmenyek">
+    <h2>Szerviz előzmények</h2>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Dátum</th>
+                <th>Motor neve</th>
+                <th>Kilométeróra</th>
+                <th>Elvégzett művelet</th>
+                <th>Költség</th>
+            </tr>
+        </thead>
 
+        <tbody id="szerviz_adatok">
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Költségek járműre lebontva</h2>
+    <h3>Összköltség: <span id="ossz"></span> Ft</h3>
+</section>
 
   </main>
 
-  <footer>Karbantartás – Készített: Végi László Péter Neptunkód: LJLU0N</footer>
+  <footer>Szerviznapló – Készített: Végi László Péter Neptunkód: LJLU0N</footer>
 
 </body>
 

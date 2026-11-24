@@ -1,4 +1,44 @@
-{
-  "vehicle": null,
-  "services": []
-}
+[
+    {
+        "id": 1,
+        "nev": "Kawasaki Versys 650",
+        "datum":"2026.03.11",
+        "szerviz": "Olaj- és olajszűrőcsere",
+        "koltseg": 28000
+    },
+    {
+        "id": 1,
+        "nev": "Kawasaki Versys 650",
+        "datum":"2026.06.04",
+        "szerviz": "Láncszettcsere",
+        "koltseg": 65000
+    },
+    {
+        "id": 1,
+        "nev": "Kawasaki Versys 650",
+        "datum":"2026.04.03",
+        "szerviz": "Légszűrőcsere",
+        "koltseg": 12000
+    },
+    {
+        "id": 2,
+        "nev": "KTM Duke 125",
+        "datum":"2026.06.12",
+        "szerviz": "Olajcsere",
+        "koltseg": 15000
+    },
+    {
+        "id": 2,
+        "nev": "KTM Duke 125",
+        "datum":"2026.09.12",
+        "szerviz": "Első fékbetétcsere",
+        "koltseg": 18000
+    },
+    {
+        "id": 2,
+        "nev": "KTM Duke 125",
+        "datum":"2026.09.11",
+        "szerviz": "Gyertyacsere",
+        "koltseg": 6000
+    }
+]
