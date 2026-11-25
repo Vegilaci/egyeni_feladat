@@ -5,6 +5,7 @@ body {
     color: #243041;}
 
 header {
+    position: relative;
     background: #1d344d;
     color: white;
     text-align: center;
@@ -157,5 +158,21 @@ tbody tr:hover {
 #szerviz button:hover{
 
         background-color: #4c86bd;
+}
 
+#clear_storage {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #b52b2b;
+    color: white;
+    border: none;
+    border-radius: 5px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#clear_storage:hover {
+    background-color: #e03030;
 }

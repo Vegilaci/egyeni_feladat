@@ -15,54 +15,63 @@ document.getElementById("jarmuvek").innerHTML = motor_lista;
 
 var szervizek = [
     {
-        id: 1,
+        id: "kawasaki",
         nev: "Kawasaki Versys 650",
         datum: "2026-04-12",
         km: 24000,
-        szerviz: "Olaj- és olajszűrőcsere",
+        szerviz: "Olaj- és olajszűrő csere",
         koltseg: 28000
     },
     {
-        id: 1,
+        id: "kawasaki",
         nev: "Kawasaki Versys 650",
         datum: "2026-06-18",
         km: 26500,
-        szerviz: "Láncszettcsere",
+        szerviz: "Láncszett csere",
         koltseg: 65000
     },
     {
-        id: 1,
+        id: "kawasaki",
         nev: "Kawasaki Versys 650",
         datum: "2026-09-15",
         km: 28000,
-        szerviz: "Légszűrőcsere",
+        szerviz: "Légszűrő csere",
         koltseg: 12000
     },
     {
-        id: 2,
+        id: "ktm",
         nev: "KTM Duke 125",
         datum: "2026-03-20",
         km: 8500,
-        szerviz: "Olajcsere",
+        szerviz: "Olaj csere",
         koltseg: 15000
     },
     {
-        id: 2,
+        id: "ktm",
         nev: "KTM Duke 125",
         datum: "2026-07-10",
         km: 10200,
-        szerviz: "Első fékbetétcsere",
+        szerviz: "Első fékbetét csere",
         koltseg: 18000
     },
     {
-        id: 2,
+        id: "ktm",
         nev: "KTM Duke 125",
         datum: "2026-10-05",
         km: 12000,
-        szerviz: "Gyertyacsere",
+        szerviz: "Gyertya csere",
         koltseg: 6000
     }
 ];
+
+
+if (localStorage.getItem("uj_szervizek") != null) {
+    var mentett_szervizek = JSON.parse(localStorage.getItem("uj_szervizek"));
+
+    for (var i = 0; i < mentett_szervizek.length; i++) {
+        szervizek.push(mentett_szervizek[i]);
+    }
+}
 
 
 var megjelenites = "";
@@ -77,11 +86,11 @@ for (var i = 0;i< szervizek.length; i++){
     megjelenites += "<tr><td>"+ szervizek[i].datum +"</td>"+"<td>"+ szervizek[i].nev +"</td> <td>"+ szervizek[i].km +" Km</td> <td>"+szervizek[i].szerviz+"</td> <td>"+szervizek[i].koltseg+" Ft</td></tr>";
     ossz_kolt += szervizek[i].koltseg;
 
-    if (szervizek[i].id == 1) {
+    if (szervizek[i].id == "kawasaki") {
         kawa_koltseg += szervizek[i].koltseg;
     }
 
-    if (szervizek[i].id == 2) {
+    if (szervizek[i].id == "ktm") {
         ktm_koltseg += szervizek[i].koltseg;
     }
 }

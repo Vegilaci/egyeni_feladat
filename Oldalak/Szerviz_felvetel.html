@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <button id="clear_storage" onclick="localStorage.clear(); location.reload();"> Localstorage clear </button>
         <h1>Karbantartás</h1>
         <p>Szerviznapló</p>
         <p>Új szervíz felvétele</p>
@@ -18,24 +19,24 @@
         <a href="szerviz.html">Új szerviz</a>
     </nav>
     <main>
-        <form id="szerviz" action="">
+        <form id="szerviz">
             <label for="motorok">Motorok:</label>
             <select name="motorok" id="szerviz_motorok"></select>
             <br/>
             <label for="ideje">Mikor volt?:</label>
-            <input type="date" name="ideje">
+            <input type="date" name="ideje" id="ideje">
             <br/>
             <label for="km_allas">Km állás:</label>
-            <input type="number" name="km_allas">
+            <input type="number" name="km_allas" id="km_allas">
             <br/>
             <label for="szerviz">Elvégzett szervíz</label>
-            <input type="text" name="szerviz">
+            <input type="text" name="szerviz" id="szerviz_megjegy">
             <br/>
             <label for="koltseg">Költség</label>
-            <input type="text" name="koltseg">
+            <input type="number" name="koltseg" id="koltseg">
             
-            <button>Szervíz mentése</button>
-            <button>Ürlap törlése</button>
+            <button type="button" onclick="szerviz_mentes()" >Szervíz mentése</button>
+            <button type="reset" >Ürlap törlése</button>
 
         </form>
     </main>
