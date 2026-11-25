@@ -20,7 +20,7 @@ function szerviz_mentes(){
   var szerviz_jegy = document.getElementById("szerviz_megjegy").value;
   var koltseg = parseInt(document.getElementById("koltseg").value);
 
-  if (datum == "" || km <= 0 || szerviz_jegy.trim() == "" || koltseg < 0) {
+  if (datum == "" || isNaN(km) || szerviz_jegy.trim() == "" || isNaN(koltseg)) {
     alert("Kérlek tölts ki minden mezőt megfelelően!");
     return;
   }
