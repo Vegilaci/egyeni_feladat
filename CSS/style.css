@@ -96,3 +96,66 @@ th, td {
 tbody tr:hover {
     background-color: #dce3eb;
 }
+
+.diagram {
+    width: 100%;
+    height: 30px;
+    background-color: #aebdca;
+    border-radius: 10px 0;
+    overflow: hidden;
+}
+
+#kawa_diagram {
+    height: 100%;
+    background-color: #438b40;
+    border-radius: 10px 0;
+}
+
+#ktm_diagram {
+    height: 100%;
+    background-color: #ffae00;
+    border-radius: 10px 0;
+}
+
+#szerviz{
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #dce3eb;
+    border: 2px solid #294763;
+    border-radius: 10px ;
+}
+
+#szerviz label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#szerviz input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #294763;
+    border-radius: 5px 0;
+    background-color: #f2f4f7;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#szerviz button{
+    background-color: #294763;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#szerviz button:hover{
+
+        background-color: #4c86bd;
+
+}

@@ -68,10 +68,24 @@ var szervizek = [
 var megjelenites = "";
 var ossz_kolt = 0;
 
+//költségek kimutatása járműre lebontva
+var kawa_koltseg = 0;
+var ktm_koltseg = 0;
+
+
 for (var i = 0;i< szervizek.length; i++){
-  megjelenites += "<tr><td>"+ szervizek[i].datum +"</td>"+"<td>"+ szervizek[i].nev +"</td> <td>"+ szervizek[i].km +" Km</td> <td>"+szervizek[i].szerviz+"</td> <td>"+szervizek[i].koltseg+" Ft</td></tr>";
-  ossz_kolt += szervizek[i].koltseg;
+    megjelenites += "<tr><td>"+ szervizek[i].datum +"</td>"+"<td>"+ szervizek[i].nev +"</td> <td>"+ szervizek[i].km +" Km</td> <td>"+szervizek[i].szerviz+"</td> <td>"+szervizek[i].koltseg+" Ft</td></tr>";
+    ossz_kolt += szervizek[i].koltseg;
+
+    if (szervizek[i].id == 1) {
+        kawa_koltseg += szervizek[i].koltseg;
+    }
+
+    if (szervizek[i].id == 2) {
+        ktm_koltseg += szervizek[i].koltseg;
+    }
 }
+
 document.getElementById("szerviz_adatok").innerHTML = megjelenites;
 document.getElementById("ossz").innerHTML = ossz_kolt;
 
@@ -89,4 +103,11 @@ function kepmutatas() {
     }
 }
 
-console.log(motorok)
+var kawa_szazalek = (kawa_koltseg / ossz_kolt) * 100;
+var ktm_szazalek = (ktm_koltseg / ossz_kolt) * 100;
+
+document.getElementById("kawa_kolt").innerHTML = kawa_koltseg;
+document.getElementById("kawa_diagram").style.width = kawa_szazalek + "%";
+
+document.getElementById("ktm_kolt").innerHTML = ktm_koltseg;
+document.getElementById("ktm_diagram").style.width = ktm_szazalek + "%";

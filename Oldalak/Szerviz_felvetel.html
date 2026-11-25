@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szervíznapló Új szervíz</title>
+    <script src="../JS/szerviz.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Karbantartás</h1>
+        <p>Szerviznapló</p>
+        <p>Új szervíz felvétele</p>
+    </header>
+    <nav>
+        <a href="../index.html">Főoldal</a>
+        <a href="szerviz.html">Új szerviz</a>
+    </nav>
+    <main>
+        <form id="szerviz" action="">
+            <label for="motorok">Motorok:</label>
+            <select name="motorok" id="szerviz_motorok"></select>
+            <br/>
+            <label for="ideje">Mikor volt?:</label>
+            <input type="date" name="ideje">
+            <br/>
+            <label for="km_allas">Km állás:</label>
+            <input type="number" name="km_allas">
+            <br/>
+            <label for="szerviz">Elvégzett szervíz</label>
+            <input type="text" name="szerviz">
+            <br/>
+            <label for="koltseg">Költség</label>
+            <input type="text" name="koltseg">
+            
+            <button>Szervíz mentése</button>
+            <button>Ürlap törlése</button>
+
+        </form>
+    </main>
+
+
+</body>
+</html>
