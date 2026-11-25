@@ -134,7 +134,7 @@ tbody tr:hover {
     margin-bottom: 5px;
 }
 
-#szerviz input{
+#szerviz input, select{
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
